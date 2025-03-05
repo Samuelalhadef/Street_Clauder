@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Fighter JS - Amélioré</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="800" height="450"></canvas>
+        
+        <div class="health-bars">
+            <div>
+                <div class="player-name">RYU</div>
+                <div class="health-bar">
+                    <div id="player1Health" class="health-fill" style="width: 100%;"></div>
+                </div>
+                <div class="special-bar-container">
+                    <div id="player1Special" class="special-bar-fill"></div>
+                </div>
+            </div>
+            <div class="timer-container">
+                <div class="vs-text">VS</div>
+                <div class="timer">99</div>
+            </div>
+            <div>
+                <div class="player-name">KEN</div>
+                <div class="health-bar">
+                    <div id="player2Health" class="health-fill" style="width: 100%;"></div>
+                </div>
+                <div class="special-bar-container player2-special">
+                    <div id="player2Special" class="special-bar-fill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div>Joueur 1: A/D bouger, W sauter, S s'accroupir, Q/E attaques</div>
+            <div>Spécial: R (projectile), F+direction (attaque directionnelle)</div>
+            <div>Joueur 2: Flèches pour bouger, M/K attaques</div>
+            <div>Spécial: L (projectile), P+direction (attaque directionnelle)</div>
+        </div>
+        
+        <div class="title-screen">
+            <h1>STREET FIGHTER JS</h1>
+            <button class="start-button">JOUER</button>
+        </div>
+        
+        <div class="game-over">
+            <div class="winner-text">JOUEUR 1 GAGNE!</div>
+            <button class="restart-button">REJOUER</button>
+        </div>
+        
+        <div class="ko-text">K.O.!</div>
+        
+        <!-- Contrôles tactiles pour les appareils mobiles -->
+        <div class="touch-controls">
+            <div class="left-btns">
+                <div class="touch-btn" id="p1-left">←</div>
+                <div class="touch-btn" id="p1-right">→</div>
+                <div class="touch-btn" id="p1-jump">↑</div>
+                <div class="touch-btn" id="p1-punch">P</div>
+                <div class="touch-btn" id="p1-kick">K</div>
+                <div class="touch-btn" id="p1-special">S</div>
+            </div>
+            <div class="right-btns">
+                <div class="touch-btn" id="p2-left">←</div>
+                <div class="touch-btn" id="p2-right">→</div>
+                <div class="touch-btn" id="p2-jump">↑</div>
+                <div class="touch-btn" id="p2-punch">P</div>
+                <div class="touch-btn" id="p2-kick">K</div>
+                <div class="touch-btn" id="p2-special">S</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts du jeu -->
+    <script src="utils.js"></script>
+    <script src="projectile.js"></script>
+    <script src="effects.js"></script>
+    <script src="sprite.js"></script>
+    <script src="background.js"></script>
+    <script src="game.js"></script>
+    <script src="controls.js"></script>
+</body>
+</html>
